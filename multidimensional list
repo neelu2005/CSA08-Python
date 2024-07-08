@@ -1,0 +1,26 @@
+# Function to create a multidimensional list
+def create_multidimensional_list(rows, cols):
+    # Creating a list of lists with rows and columns
+    multidimensional_list = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append((i * cols) + j + 1)  # Filling with sequential numbers
+        multidimensional_list.append(row)
+    return multidimensional_list
+
+# Function to print a multidimensional list
+def print_multidimensional_list(multidimensional_list):
+    for row in multidimensional_list:
+        print(row)
+
+# Example: Create a 3x3 multidimensional list
+rows = 3
+cols = 3
+
+# Creating the multidimensional list
+md_list = create_multidimensional_list(rows, cols)
+
+# Printing the multidimensional list
+print("Multidimensional list:")
+print_multidimensional_list(md_list)
