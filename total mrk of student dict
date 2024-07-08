@@ -1,0 +1,11 @@
+# Creating a dictionary to store marks of students
+marks = {
+    'Student1': {'Maths': 85, 'Science': 90, 'English': 88},
+    'Student2': {'Maths': 78, 'Science': 82, 'English': 79},
+    'Student3': {'Maths': 92, 'Science': 88, 'English': 95}
+}
+
+# Calculating total marks for each student
+for student, subjects in marks.items():
+    total_marks = sum(subjects.values())
+    print(f"Total marks for {student}: {total_marks}")
