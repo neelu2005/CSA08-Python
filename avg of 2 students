@@ -1,0 +1,19 @@
+# Define a class Student
+class Student:
+    # Constructor to initialize student details and marks
+    def __init__(self, name, subject1_marks, subject2_marks):
+        self.name = name
+        self.subject1_marks = subject1_marks
+        self.subject2_marks = subject2_marks
+    
+    # Method to calculate average marks
+    def calculate_average_marks(self):
+        return (self.subject1_marks + self.subject2_marks) / 2
+
+# Creating instances of Student class for two students
+student1 = Student("Student1", 85, 90)
+student2 = Student("Student2", 78, 82)
+
+# Calculating and printing average marks for each student
+print(f"Average marks for {student1.name}: {student1.calculate_average_marks()}")
+print(f"Average marks for {student2.name}: {student2.calculate_average_marks()}")
