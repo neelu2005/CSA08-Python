@@ -1,0 +1,19 @@
+# Creating the original list a
+a = [1, 2, 3, 4, 5]
+
+# Creating an alias copy b of list a
+b = a
+
+# Making changes in list a
+a.append(6)
+a[1] = 9
+
+# Printing both lists to verify changes
+print("List a:", a)
+print("List b (alias of a):", b)
+
+# Verifying changes
+if a is b:
+    print("b is an alias of a. Changes in a are reflected in b.")
+else:
+    print("b is not an alias of a. Changes in a are not reflected in b.")
