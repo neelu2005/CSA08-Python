@@ -1,0 +1,44 @@
+# Creating a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Accessing elements of a tuple
+print("Tuple elements:")
+for element in my_tuple:
+    print(element)
+
+# Tuple length
+print("Length of tuple:", len(my_tuple))
+
+# Concatenating tuples
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+concatenated_tuple = tuple1 + tuple2
+print("Concatenated tuple:", concatenated_tuple)
+
+# Count occurrences of an element in a tuple
+count_3 = my_tuple.count(3)
+print("Count of 3 in tuple:", count_3)
+
+# Finding index of an element in a tuple
+index_4 = my_tuple.index(4)
+print("Index of 4 in tuple:", index_4)
+
+# Slicing a tuple
+sliced_tuple = my_tuple[1:4]
+print("Sliced tuple:", sliced_tuple)
+
+# Checking membership in tuple
+print("Is 5 in tuple?", 5 in my_tuple)
+
+# Iterating through a tuple
+print("Iterating through tuple:")
+for item in my_tuple:
+    print(item)
+
+# Converting tuple to list
+tuple_to_list = list(my_tuple)
+print("Converted tuple to list:", tuple_to_list)
+
+# Unpacking a tuple
+a, b, c, d, e = my_tuple
+print("Unpacked values:", a, b, c, d, e)
