@@ -1,0 +1,25 @@
+# Creating a dictionary
+my_dict = {
+    'name': 'John',
+    'age': 30,
+    'city': 'New York',
+    'job': 'Engineer'
+}
+
+# Printing dictionary items
+print("Dictionary items:")
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+# Printing dictionary keys
+print("\nDictionary keys:")
+for key in my_dict.keys():
+    print(key)
+
+# Copying a dictionary
+copied_dict = my_dict.copy()
+
+# Printing copied dictionary
+print("\nCopied dictionary:")
+for key, value in copied_dict.items():
+    print(f"{key}: {value}")
