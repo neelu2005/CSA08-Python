@@ -1,0 +1,13 @@
+def list_to_tuple(input_list):
+    # Converting list to tuple
+    output_tuple = tuple(input_list)
+    return output_tuple
+
+# Example: Create a tuple from a list
+input_list = [1, 2, 3, 4, 5]
+
+# Converting list to tuple
+output_tuple = list_to_tuple(input_list)
+
+# Output the tuple
+print("Tuple:", output_tuple)
