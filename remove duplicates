@@ -1,0 +1,18 @@
+def remove_duplicates(input_list):
+    # Use a set to remove duplicates since sets do not allow duplicate values
+    no_duplicates = list(set(input_list))
+    
+    # To maintain the order of elements as in the original list
+    no_duplicates.sort(key=input_list.index)
+    
+    return no_duplicates
+
+# Sample Input
+input_list = [1, 2, 3, 2, 4, 5, 3, 6, 1]
+
+# Remove duplicates from the list
+result = remove_duplicates(input_list)
+
+# Print the result
+print("Original list:", input_list)
+print("List after removing duplicates:", result)
