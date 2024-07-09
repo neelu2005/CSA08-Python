@@ -1,0 +1,24 @@
+def is_tech_number(num):
+    num_str = str(num)
+    length = len(num_str)
+    
+    # A Tech number must have an even number of digits
+    if length % 2 != 0:
+        return False
+
+    # Split the number into two equal halves
+    first_half = int(num_str[:length//2])
+    second_half = int(num_str[length//2:])
+
+    # Calculate the sum of the halves and check if its square equals the original number
+    sum_of_halves = first_half + second_half
+    return sum_of_halves**2 == num
+
+# Input from the user
+number = int(input("Enter a number: "))
+
+# Check if the number is a Tech number
+if is_tech_number(number):
+    print(f"{number} is a Tech number")
+else:
+    print(f"{number} is not a Tech number")
