@@ -1,0 +1,21 @@
+def arrange_letters(word):
+    # Convert the word to a list of characters and sort it
+    sorted_word = sorted(word)
+    
+    # Join the sorted list to form the normal order word
+    normal_order = " ".join(sorted_word)
+    
+    # Reverse the sorted list and join to form the reverse order word
+    reverse_order = " ".join(sorted_word[::-1])
+    
+    return normal_order, reverse_order
+
+# Sample Input
+word = input("Enter the word: ").upper()
+
+# Arrange letters and get the results
+normal_order, reverse_order = arrange_letters(word)
+
+# Print the results
+print("Normal order:", normal_order)
+print("Alphabetical Order Reverse:", reverse_order)
