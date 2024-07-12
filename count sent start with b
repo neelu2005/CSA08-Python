@@ -1,0 +1,28 @@
+import re
+
+def count_sentences_starting_with_B(text):
+    # Split the text into sentences using re.split(), assuming sentences end with '.', '!', or '?'
+    sentences = re.split(r'[.!?]', text)
+    
+    # Initialize a counter for sentences starting with 'B'
+    count = 0
+    
+    # Iterate through each sentence
+    for sentence in sentences:
+        # Remove leading and trailing whitespace
+        sentence = sentence.strip()
+        # Check if the sentence starts with 'B' (case insensitive)
+        if sentence.startswith('B') or sentence.startswith('b'):
+            count += 1
+    
+    return count
+
+# Example text
+text = """
+Bobby Brown bought a bouncy ball. Alice ate an apple. Ben baked a big cake.
+Bart broke the vase. Bonnie danced beautifully.
+"""
+
+# Count sentences starting with 'B'
+num_sentences = count_sentences_starting_with_B(text)
+print(f"Number of sentences starting with 'B': {num_sentences}")
