@@ -1,0 +1,20 @@
+class Employee:
+    def __init__(self, name, basic_pay, da, hra, cca):
+        self.name = name
+        self.basic_pay = basic_pay
+        self.da = da
+        self.hra = hra
+        self.cca = cca
+
+    def calculate_salary(self):
+        return self.basic_pay + self.da + self.hra + self.cca
+
+# Create three Employee objects
+employee1 = Employee("Alice", 30000, 5000, 10000, 2000)
+employee2 = Employee("Bob", 35000, 6000, 12000, 2500)
+employee3 = Employee("Charlie", 40000, 7000, 15000, 3000)
+
+# Calculate and print their salaries
+print(f"Salary of {employee1.name}: {employee1.calculate_salary()}")
+print(f"Salary of {employee2.name}: {employee2.calculate_salary()}")
+print(f"Salary of {employee3.name}: {employee3.calculate_salary()}")
