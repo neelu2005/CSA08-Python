@@ -1,0 +1,12 @@
+def remove_vowels(input_string):
+    vowels = "aeiouAEIOU"  # Define a string containing all vowels
+    # Use list comprehension to filter out vowels from the input string
+    result = ''.join([char for char in input_string if char not in vowels])
+    return result
+
+# Accept input from the user
+input_string = input("Enter a string: ")
+
+# Call the function to remove vowels and display the result
+result_string = remove_vowels(input_string)
+print(f"String after removing vowels: {result_string}")
