@@ -1,0 +1,13 @@
+# Open the file in read mode
+file_path = 'sample.txt'  # Replace with your file path
+with open(file_path, 'r') as file
+    # Read the file word by word
+    for line in file:
+        words = line.split()  # Split the line into words
+        for word in words:
+            print(word)
+
+# Output:
+# This will print each word from the file 'sample.txt' on a new line
+
+'
