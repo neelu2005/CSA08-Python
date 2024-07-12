@@ -1,0 +1,21 @@
+def count_matching_characters(s1, s2):
+    # Find the minimum length to avoid IndexError
+    min_length = min(len(s1), len(s2))
+    
+    # Initialize a counter for matching characters
+    match_count = 0
+    
+    # Loop through both strings up to the length of the shorter string
+    for i in range(min_length):
+        if s1[i] == s2[i]:
+            match_count += 1
+    
+    return match_count
+
+# Sample input
+s1 = "what"
+s2 = "watch"
+
+# Find and print the number of matches
+matches = count_matching_characters(s1, s2)
+print(f"Number of matching characters at the same index: {matches}")
