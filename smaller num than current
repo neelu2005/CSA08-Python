@@ -1,0 +1,18 @@
+def smallerNumbersThanCurrent(nums):
+    # Step 1: Sort the array and create a frequency dictionary
+    sorted_nums = sorted(nums)
+    counts = {}
+    for idx, num in enumerate(sorted_nums):
+        if num not in counts:
+            counts[num] = idx
+    
+    # Step 2: Construct the result using the counts dictionary
+    result = []
+    for num in nums:
+        result.append(counts[num])
+    
+    return result
+
+# Example usage:
+nums = [8, 1, 2, 2, 3]
+print(smallerNumbersThanCurrent(nums))  # Output: [4, 0, 1, 1, 3]
