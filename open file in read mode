@@ -1,0 +1,12 @@
+# Open the file in read mode
+file_path = 'sample.txt'  # Replace with your file path
+with open(file_path, 'r') as file:
+    # Read the file character by character
+    while True:
+        char = file.read(1)  # Read one character
+        if not char:  # Check for EOF
+            break
+        print(char, end='')  # Print the character (end='' to avoid newline)
+
+# Output:
+# This will print each character from the file 'sample.txt'
