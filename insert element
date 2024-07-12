@@ -1,0 +1,19 @@
+def insert_element(nums, element, position):
+    # Insert the element at the specified position
+    nums.insert(position - 1, element)
+    return nums
+
+# Input from user
+n = int(input("Enter the number of elements: "))
+print("Enter the elements separated by commas:")
+nums = list(map(int, input().split(',')))
+element = int(input("Enter the element to be inserted: "))
+position = int(input("Position: "))
+
+# Check if position is within bounds
+if position <= 0 or position > n + 1:
+    print("Invalid position!")
+else:
+    # Insert the element at the specified position
+    result = insert_element(nums, element, position)
+    print("Sample output:", result)
