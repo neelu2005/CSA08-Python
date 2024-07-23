@@ -1,0 +1,28 @@
+def remove_k_digits(num, k):
+    stack = []
+    
+    for digit in num:
+        # If the current digit is smaller than the last digit in the stack, and we still need to remove digits
+        while k > 0 and stack and stack[-1] > digit:
+            stack.pop()
+            k -= 1
+        stack.append(digit)
+    
+    # If there are still digits to remove, remove them from the end
+    while k > 0:
+        stack.pop()
+        k -= 1
+    
+    # Join the stack to form the result and strip leading zeros
+    result = ''.join(stack).lstrip('0')
+    
+    # Return '0' if the result is empty
+    return result if result else '0'
+
+# Sample input
+num = "1432219"
+k = 3
+
+# Getting the output
+output = remove_k_digits(num, k)
+print(f"Output: \"{output}\"")
