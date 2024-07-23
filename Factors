@@ -1,0 +1,21 @@
+def find_factors(number):
+    factors = []
+    for i in range(1, number + 1):
+        if number % i == 0:
+            factors.append(i)
+    return factors
+
+def main():
+    given_number = 100
+    N = 4
+    
+    factors = find_factors(given_number)
+    
+    print(f"Number of factors = {len(factors)}")
+    if N <= len(factors):
+        print(f"{N}th factor of {given_number} = {factors[N-1]}")
+    else:
+        print(f"{N}th factor of {given_number} does not exist")
+
+if __name__ == "__main__":
+    main()
