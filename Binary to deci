@@ -1,0 +1,35 @@
+def binary_to_decimal(binary_str):
+    return int(binary_str, 2)
+
+def find_maximum_binary(values):
+    max_value = values[0]
+    max_decimal = binary_to_decimal(max_value)
+
+    for value in values[1:]:
+        decimal_value = binary_to_decimal(value)
+        if decimal_value > max_decimal:
+            max_value = value
+            max_decimal = decimal_value
+
+    return max_value
+
+# Sample Input
+binary_values = ["1101", "1011", "1001"]
+
+# Find the maximum binary value
+max_binary_value = find_maximum_binary(binary_values)
+
+# Sample Output
+print(f"Maximum Number: {max_binary_value}")
+
+# Test cases
+test_cases = [
+    ["1101", "1011", "1001"],
+    ["1010", "0110", "1110"],
+    ["0001", "0010", "0100"]
+]
+
+for test in test_cases:
+    print(f"Given Numbers: {', '.join(test)}")
+    print(f"Maximum Number: {find_maximum_binary(test)}")
+    print()
