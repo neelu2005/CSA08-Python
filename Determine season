@@ -1,0 +1,37 @@
+def determine_season(month, day):
+    # Define the seasons and their starting dates
+    seasons = {
+        'Summer': (('Mar', 20), ('Jun', 20)),
+        'Spring': (('Jun', 21), ('Sep', 21)),
+        'Fall': (('Sep', 22), ('Dec', 20)),
+        'Winter': (('Dec', 21), ('Mar', 19))
+    }
+    
+    # Convert the month input to the first three letters with a capital first letter
+    month = month.capitalize()[:3]
+
+    # Determine the season
+    for season, ((start_month, start_day), (end_month, end_day)) in seasons.items():
+        if (month == start_month and day >= start_day) or \
+           (month == end_month and day <= end_day) or \
+           (start_month == 'Dec' and (month in ['Jan', 'Feb'] or (month == 'Mar' and day <= end_day))):
+            return f"The season is currently {season}"
+        elif (start_month != 'Dec' and end_month != 'Mar') and \
+             (month in ['Apr', 'May', 'Jul', 'Aug', 'Oct', 'Nov']):
+            if (start_month, start_day) < (month, day) < (end_month, end_day):
+                return f"The season is currently {season}"
+    
+    # If the date doesn't fit in the ranges, it's Winter (for dates not covered by above logic)
+    return "The season is currently Winter"
+
+# Read input from user
+month = input("Enter the month (First three letters, e.g., Jan, Feb, etc.): ")
+day = int(input("Enter the date: "))
+
+# Display the season
+print(determine_season(month, day))
+
+# Test cases
+print(determine_season('Jul', 29))   # Test case 1
+print(determine_season('Sep', 5))    # Test case 2
+print(determine
