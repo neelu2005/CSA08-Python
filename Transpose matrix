@@ -1,0 +1,31 @@
+
+def transpose_matrix(matrix):
+    # Get the number of rows and columns in the matrix
+    rows = len(matrix)
+    cols = len(matrix[0])
+    
+    # Create an empty matrix with dimensions switched (cols x rows)
+    transpose = [[0] * rows for _ in range(cols)]
+    
+    # Fill the transpose matrix by swapping rows and columns
+    for i in range(rows):
+        for j in range(cols):
+            transpose[j][i] = matrix[i][j]
+    
+    return transpose
+
+def print_matrix(matrix):
+    for row in matrix:
+        print(row)
+
+matrix = [
+    [4, 6, 7, 8],
+    [3, 7, 2, 7],
+    [7, 3, 7, 5]
+]
+
+transposed_matrix = transpose_matrix(matrix)
+print("Original Matrix:")
+print_matrix(matrix)
+print("\nTransposed Matrix:")
+print_matrix(transposed_matrix)
