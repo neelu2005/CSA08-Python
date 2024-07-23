@@ -1,0 +1,22 @@
+import datetime
+
+def get_day_of_week(day, month, year):
+    # Create a date object using the given day, month, and year
+    date = datetime.date(year, month, day)
+    
+    # Define a list of day names in the order returned by the weekday() method
+    day_names = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    
+    # Get the day of the week as an integer (0=Monday, 1=Tuesday, ..., 6=Sunday)
+    day_index = date.weekday()
+    
+    # Return the corresponding day name
+    return day_names[day_index]
+
+# Example Input
+day = 31
+month = 8
+year = 2019
+
+# Output the result
+print(get_day_of_week(day, month, year))
