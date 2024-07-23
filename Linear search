@@ -1,0 +1,18 @@
+def linear_search(lst, target):
+    for element in lst:
+        if element == target:
+            return "Exist"
+    return "Not exist"
+
+# Sample inputs
+lst = [2, 4, 6, 8, 9, 7, 9]
+
+# Test with target 7
+target = 7
+result = linear_search(lst, target)
+print(f"Target: {target}\nResult: {result}")
+
+# Test with target 5
+target = 5
+result = linear_search(lst, target)
+print(f"Target: {target}\nResult: {result}")
