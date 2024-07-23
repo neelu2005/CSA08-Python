@@ -1,0 +1,14 @@
+# Create a dictionary representing a person's information
+person_info = {
+    "name": "John Doe",
+    "age": 30,
+    "gender": "Male",
+    "city": "New York"
+}
+
+# Find the length of the dictionary
+dictionary_length = len(person_info)
+
+# Output the dictionary and its length
+print("Person Information Dictionary:", person_info)
+print("Length of the Dictionary:", dictionary_length)
