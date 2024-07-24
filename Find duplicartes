@@ -1,0 +1,18 @@
+def find_duplicates(input_list):
+    # Create a dictionary to count the occurrences of each element
+    element_count = {}
+    
+    # Iterate through the list and count each element
+    for element in input_list:
+        if element in element_count:
+            element_count[element] += 1
+        else:
+            element_count[element] = 1
+    
+    # Extract elements that appear more than once
+    duplicates = [element for element, count in element_count.items() if count > 1]
+    
+    return duplicates
+
+# Example usage:
+input_list = [1, 2, 3, 4, 5, 2, 
