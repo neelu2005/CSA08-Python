@@ -1,0 +1,20 @@
+def is_tech_number(n):
+    # Convert the number to a string to easily split it
+    num_str = str(n)
+    # Check if the number has an even number of digits
+    if len(num_str) % 2 != 0:
+        return False
+    # Split the number into two equal halves
+    half_len = len(num_str) // 2
+    first_half = int(num_str[:half_len])
+    second_half = int(num_str[half_len:])
+    # Check if the square of the sum of the halves equals the original number
+    return (first_half + second_half) ** 2 == n
+
+# Example usage
+number = 2025
+
+if is_tech_number(number):
+    print(f"{number} is a tech number")
+else:
+    print(f"{number} is
