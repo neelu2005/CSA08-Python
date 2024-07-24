@@ -1,0 +1,14 @@
+def is_substring(main_string, sub_string):
+    if sub_string in main_string:
+        return True
+    else:
+        return False
+
+# Example usage
+main_string = "Hello, world!"
+sub_string = "world"
+
+if is_substring(main_string, sub_string):
+    print(f'"{sub_string}" is a substring of "{main_string}"')
+else:
+    print(f'"{sub_string}" is not a substring of "{main_string}"')
